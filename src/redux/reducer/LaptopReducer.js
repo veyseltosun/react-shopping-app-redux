@@ -5,7 +5,7 @@ const initialState = {
 
 }
 
-const laptopReducer = () =>{
+const laptopReducer = (state=initialState, action) =>{
     switch(action.type){
         case SELL_LAPTOP:
             return{
