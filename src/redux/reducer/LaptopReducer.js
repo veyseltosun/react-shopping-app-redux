@@ -1,4 +1,4 @@
-import { bindActionCreators } from "redux";
+
 import { SELL_LAPTOP } from "../types/types";
 const initialState = {
     numberOfLaptop : 100,
