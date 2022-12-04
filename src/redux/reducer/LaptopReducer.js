@@ -1,7 +1,7 @@
 
 import { SELL_LAPTOP } from "../types/types";
 const initialState = {
-    numberOfLaptop : 100,
+    numberOfLaptops : 100
 
 }
 
@@ -10,11 +10,12 @@ const laptopReducer = (state=initialState, action) =>{
         case SELL_LAPTOP:
             return{
                 ...state,
-                numberOfLaptop:state.numberOfLaptop - 1,
+                numberOfLaptops: state.numberOfLaptops  - 1,
 
             }
             default:
-                state
+                return state;
+                
 
 
     }
