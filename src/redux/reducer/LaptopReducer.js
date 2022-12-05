@@ -1,7 +1,7 @@
 
 import { SELL_LAPTOP } from "../types/types";
 const initialState = {
-    numberOfLaptops : 100
+    numberOfLaptops : 100       
 
 }
 
