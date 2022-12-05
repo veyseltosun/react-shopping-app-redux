@@ -12,7 +12,7 @@ function Phone() {
         <h2>Redux ----Hooks----</h2>
         <h3>Number of phones: {numberOfPhones}</h3>
         <input type="number" value={number} onChange={(e)=>setNumber(e.target.value)} />
-        <button onClick={()=>dispatch(sellPhone())}>Sell Phones</button>
+        <button onClick={()=>dispatch(sellPhone(number))}>Sell Phones</button>
     </div>
   )
 }
