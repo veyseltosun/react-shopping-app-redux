@@ -16,7 +16,8 @@ function Laptop(props) {
         type="number"
         value={number}
         onChange={(e) => setNumber(e.target.value)}/>
-        <button onClick={() => props.sellLaptop(number)}>Sell Laptop</button>
+        <button onClick={() => 
+            props.sellLaptop(number)}>Sell Laptop</button>
     </div>
   )
 }
