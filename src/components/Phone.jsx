@@ -1,13 +1,16 @@
 import React from 'react'
 import {useSelector, useDispatch,} from "react-redux";
+import {sellPhone} from "../redux/actions/actions"
 
 function Phone() {
     const numberOfPhones = useSelector((state) => state.phone.numberOfPhones)
+    const dispatch = useDispatch()
     console.log(numberOfPhones)
   return (
     <div className='container'>
         <h2>Redux ----Hooks----</h2>
         <h3>Number of phones: {numberOfPhones}</h3>
+        <button onClick={()=>dispatch(sellPhone())}>Sell Phones</button>
     </div>
   )
 }
