@@ -17,10 +17,11 @@ export const sellComp = () =>{
 
     ;
 } ;
-export const sellPhone = () =>{
+export const sellPhone = (number = 1) =>{
     return  {
 
         type: SELL_PHONE,
+        payload: number, 
     }
 
     
