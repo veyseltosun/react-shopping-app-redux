@@ -3,6 +3,7 @@ import {connect} from "react-redux";
 import {sellLaptop} from "../redux/actions/actions"
 
 function Laptop(props) {
+    const [number, setNumber] = React.useState(1);
     console.log("props");
     console.log("props.numberOfLaptops", props.numberOfLaptops);
   return (
@@ -11,7 +12,11 @@ function Laptop(props) {
         <h3>Nuber of Laptops:{props.numberOfLaptops}
             
         </h3>
-        <button onClick={props.sellLaptop}>Sell Laptop</button>
+        <input 
+        type="number"
+        value={number}
+        onChange={(e) => setNumber(e.target.value)}/>
+        <button onClick={() => props.sellLaptop(number)}>Sell Laptop</button>
     </div>
   )
 }
@@ -25,7 +30,7 @@ const mapStateToProps = (state) =>{
 
 const mapDispatchToProps = (dispatch) => {
     return {
-        sellLaptop: () => dispatch(sellLaptop())
+        sellLaptop: (number) => dispatch(sellLaptop(number)),
     }
 
 }
