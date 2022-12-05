@@ -4,10 +4,10 @@ import {sellPhone} from "../redux/actions/actions"
 
 function Phone() {
   const [number, setNumber] = useState(1);
-    const numberOfPhones = useSelector((state) => state.phone.numberOfPhones)
+    const numberOfPhones = useSelector((state) => state.numberOfPhones)
     
     const dispatch = useDispatch()
-    console.log(numberOfPhones)
+   
   return (
     <div className='container'>
         <h2>Redux ----Hooks----</h2>
